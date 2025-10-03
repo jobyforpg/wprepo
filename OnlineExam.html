@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+
+        function examForm(form){
+            var i=0;
+            if(form.one[2].checked)
+            i+=1;
+            if(form.two[0].checked)
+            i+=1;
+            if(form.three[0].checked)
+            i+=1;
+            if(form.four[1].checked)
+            i+=1;
+        window.alert("Thank you for taking this Online exam!! Your Score is :"+i)
+        }
+    </script>
+</head>
+<body style="background-color:rgb(0, 92, 172); color: black;">
+    <form action="" onsubmit="examForm(this)">
+<p>
+    <h1>1)Which is platform independent language</h1>
+    <label for="">C++</label>
+    <input type="radio" name="one" value="c++">
+       <label for="">C</label>
+    <input type="radio" name="one" value="c">
+       <label for="">JAVA</label>
+    <input type="radio" name="one" value="java">
+       <label for="">BASIC</label>
+    <input type="radio" name="one" value="basic">
+</p>
+<p>
+    <h1>2)Which is class of all class in java</h1>
+       <label for="">Object</label>
+    <input type="radio" name="two" value="object">
+       <label for="">Math</label>
+    <input type="radio" name="two" value="math">
+       <label for="">System</label>
+    <input type="radio" name="two" value="system">
+       <label for="">Graphics</label>
+    <input type="radio" name="two" value="graphics">
+</p>
+<p>
+    <h1>3)frame package is in which package</h1>
+       <label for="">AWT</label>
+    <input type="radio" name="three" value="awt">
+       <label for="">Apple</label>
+    <input type="radio" name="three" value="apple">
+       <label for="">Lang</label>
+    <input type="radio" name="three" value="lang">
+       <label for="">swing</label>
+    <input type="radio" name="three" value="swing">
+</p>
+<p>
+    <h1>4)java doesn't support</h1>
+       <label for="">INHERITANCE</label>
+    <input type="radio" name="four" value="inheritance">
+       <label for="">MULTIPLE INHERITANCE</label>
+    <input type="radio" name="four" value="inherit">
+       <label for="">POLIMORPHISM</label>
+    <input type="radio" name="four" value="polymorphism">
+       <label for="">Encryption</label>
+    <input type="radio" name="four" value="encryption">
+</p>
+<input type="submit" value="submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
