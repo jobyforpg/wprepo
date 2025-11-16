@@ -42,9 +42,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $sal=$_POST['sal'];
 
 
-    //emp_register (emp_id, emp_name, emp_dept, emp_sal) "emp_id, emp_name, emp_dept, emp_sal"-> db table colume name
+    //emp_register (emp_id, emp_name, emp_dept, emp_sal) "emp_id, emp_name, emp_dept, emp_sal"-> "db table colume name"
     $Iquery = "INSERT INTO emp_register (emp_id, emp_name, emp_dept, emp_sal) 
-           VALUES ('$id', '$ename', '$dept', '$sal')";
+           VALUES ('$id', '$ename', '$dept', '$sal')";   // VALUES ('$id', '$ename', '$dept', '$sal'======> above $id,$ename etc ... name
 
 
     $res=mysqli_query($conn,$Iquery);
@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
     while($row=mysqli_fetch_assoc($res))
     {
-        // table colume name ->$row[emp_id]
+        // table colume name ->$row[emp_id] from database 
         echo"<tr><td>$row[emp_id]</td>";
         echo"<td>$row[emp_name]</td>";
         echo"<td>$row[emp_dept]</td>";
@@ -87,3 +87,4 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 mysqli_close($conn)
 
 ?>
+
