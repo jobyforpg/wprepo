@@ -35,7 +35,7 @@ else
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
 
-// $id=$_POST['eid']  eid ->  is input name attributs value
+// $id=$_POST['eid']  eid ->  is input tag <input> "name"  attributs value
     $id=$_POST['eid'];  
     $ename=$_POST['ename'];
     $dept=$_POST['dept'];
@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     echo"ERROR";
        } 
 
-    //   show dtata in table manner
+    //show dtata in table manner 
     
     $Ssql="SELECT*FROM emp_register";
     $res=mysqli_query($conn,$Ssql);
@@ -85,4 +85,5 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     }
 }
 mysqli_close($conn)
+
 ?>
